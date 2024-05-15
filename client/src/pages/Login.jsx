@@ -27,8 +27,19 @@ const Login = () => {
 
   const avatar = useFileHandler("single");
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div style={{}}>
+    <div style={{
+      // CAN BE CHANGE THIS BLUE BACKGROUND COLOUR DURING FINAL OUTPUT
+      backgroundImage: "radial-gradient(circle at 50% 50%, rgba(0, 255, 235, 1) 0%, rgba(7, 58, 187, 1) 100%)"
+    }}>
       <Container
         component={"main"}
         maxWidth="xs"
@@ -56,6 +67,7 @@ const Login = () => {
                   width: "100%",
                   marginTop: "1rem",
                 }}
+                onSubmit={handleLogin}
               >
                 <TextField
                   required
@@ -115,6 +127,7 @@ const Login = () => {
                   width: "100%",
                   marginTop: "1rem",
                 }}
+                onSubmit={handleSignUp}
               >
                 <Stack position={"relative"} width={"10rem"} margin={"auto"}>
                   <Avatar
