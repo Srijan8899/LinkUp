@@ -1,4 +1,4 @@
-import { Schema, models , model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 const schema = new Schema(
   {
@@ -32,4 +32,4 @@ const schema = new Schema(
   }
 );
 
-export const User = models.User || model("User", schema);
+export const User = mongoose.models.User || model("User", schema);
